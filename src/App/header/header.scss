@@ -1,0 +1,117 @@
+.header-wrapper {
+  display: block;
+  max-width: 100%;
+  padding: 3vw 5vw;
+  .header-grid {
+    display: grid;
+    grid-template-areas: 'title nav';
+    .header-left {
+      grid-area: title;
+      text-align: left;
+      justify-content: flex-start;
+      .site-title {
+        display: inline-block;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #222;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      p {
+        display: inline-block;
+        font-size: 14px;
+        padding-left: 0.8em;
+        color: #aaa;
+      }
+    }
+    .header-right {
+      grid-area: nav;
+      text-align: right;
+      justify-content: flex-end;
+      vertical-align: middle;
+      padding-right: 20px;
+      .mobile-buttons {
+        display: none;
+      }
+      .nav {
+        .nav-item {
+          margin-left: 20px;
+          text-decoration: none;
+          font-size: 16px;
+          color: #aaa;
+          font-weight: 400;
+          line-height: 2em;
+          &:hover {
+            color: #222;
+          }
+          &.active {
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 99;
+    .header-grid {
+      .header-left {
+        p {
+          display: none;
+        }
+      }
+      .header-right {
+        padding-right: 10px;
+        .nav {
+          display: none;
+        }
+        .mobile-buttons {
+          display: inline;
+          .nav-in {
+            font-size: 1.5em;
+          }
+          .nav-out {
+            display: none;
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 999;
+      background-color: white;
+      text-align: center;
+      .nav {
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        a {
+          display: block;
+          text-decoration: none;
+          color: #333;
+          cursor: pointer;
+          font-family: 'Chivo';
+          font-size: 36px;
+          line-height: 1.8em;
+        }
+      }
+    }
+  }
+}

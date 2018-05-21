@@ -1,0 +1,50 @@
+.main-wrapper {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vw;
+  padding-right: 5vw;
+  padding-left: 5vw; }
+  .main-wrapper .main-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 35px; }
+    .main-wrapper .main-grid .grid-item {
+      position: relative; }
+      .main-wrapper .main-grid .grid-item img {
+        width: 100%; }
+      .main-wrapper .main-grid .grid-item .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: white; }
+      .main-wrapper .main-grid .grid-item .text {
+        color: #222;
+        font-size: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: 2px 2px 2px #aaa;
+        text-transform: uppercase; }
+    .main-wrapper .main-grid .grid-item:hover .overlay {
+      opacity: 1; }
+
+@media screen and (max-width: 770px) {
+  .main-wrapper .main-grid {
+    grid-template-columns: auto; }
+    .main-wrapper .main-grid .grid-item {
+      height: auto;
+      overflow: hidden; }
+      .main-wrapper .main-grid .grid-item img {
+        width: 100%; }
+      .main-wrapper .main-grid .grid-item .overlay {
+        display: none; } }
