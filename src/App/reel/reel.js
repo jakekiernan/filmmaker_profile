@@ -13,6 +13,15 @@ class Reel extends Component {
             <source src={reel} type="video/mp4" />
           </video>
         </div>
+        <div className="button-container">
+          <a
+            className="button"
+            id="button1"
+            href="https://vimeo.com/album/2123513"
+            target="_blank">
+            Vimeo
+          </a>
+        </div>
       </div>
     );
   }

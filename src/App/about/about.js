@@ -62,7 +62,7 @@ class About extends Component {
                   In 2013, her  short film ‘Ten to Sing’ was accepted into the Cannes Shorts Corner and shortly after she directed her first feature film ‘Zombie Shark,’ which gained her the honor of being the first woman to direct a Syfy Channel original film. She has since followed it up by directing three more feature films for Syfy and editing a wide variety of films including Jeepers Creepers 3.
                 </p>
                 <p>
-                  Misty is currently developing a variety of new projects with her business partners at <a href="www.fablehouse.tv">Fable House Films</a>. 
+                  Misty is currently developing a variety of new projects with her business partners at <a href="http://www.fablehouse.tv" target="_blank">Fable House Films</a>. 
                 </p>
               </div>
             </div>

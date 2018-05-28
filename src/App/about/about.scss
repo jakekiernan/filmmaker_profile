@@ -104,7 +104,30 @@
         grid-template: 'right' 'left';
         .about-content-left {
           grid-area: left;
-          display: none;
+          padding: 1em 0;
+          text-align: center;
+          .button-container {
+            display: inline-block;
+            padding-left: 0;
+            .button {
+              margin: 0;
+              padding: 1em 1.5em;
+              font-size: 12px;
+              letter-spacing: 0;
+            }
+            #button2 {
+              padding: 1em 1.72em;
+              margin-left: 1em;
+            }
+            #button3{
+              padding: 1em 2.5em;
+              margin-left: 1em;              
+            }
+            .button:hover {
+              background-color: white;
+              color: #ff0d00;
+            }
+          }      
         }
         .about-content-right {
           grid-area: right;

@@ -70,13 +70,26 @@
 @media screen and (max-width: 480px) {
   .feature-wrapper #text-div {
     max-width: 100vw;
-    font-size: 180%;
     transform: translate(0, 0);
     opacity: 1;
     grid-template-areas: 'title' 'description' 'credits'; }
+    .feature-wrapper #text-div #title {
+      font-size: 7vw;
+      text-align: left; }
+      .feature-wrapper #text-div #title span {
+        font-size: 4vw; }
+    .feature-wrapper #text-div #description {
+      font-size: 4vw;
+      margin: 3vh 0; }
     .feature-wrapper #text-div #credits {
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-between;
+      font-size: 4vw;
+      font-weight: bold; }
+      .feature-wrapper #text-div #credits span {
+        display: block; }
+      .feature-wrapper #text-div #credits #prod_comp {
+        display: none; }
   .feature-wrapper #image-container-two #feature-image-two {
     transform: translate(0, 0px);
     opacity: 1; }

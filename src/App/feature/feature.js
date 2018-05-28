@@ -85,10 +85,10 @@ class Feature extends Component {
           <h1 id="title">{feature_object.title} <span>({feature_object.year})</span></h1>
           <p id="description">{feature_object.description}</p>
           <div id="credits">
-            <p>{feature_object.credits[0]}</p>
-            <p>{feature_object.credits[1]}</p>
-            <p>{feature_object.credits[2]}</p>
-            <p>{feature_object.credits[3]}</p>
+            <p>Directed by <span>{feature_object.credits[0]}</span></p>
+            <p>Edited by <span>{feature_object.credits[1]}</span></p>
+            <p>Written by <span>{feature_object.credits[2]}</span></p>
+            <p id="prod_comp">{feature_object.credits[3]}</p>
           </div>
         </div>
         <div id="image-container-two">
