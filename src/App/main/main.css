@@ -48,3 +48,7 @@
         width: 100%; }
       .main-wrapper .main-grid .grid-item .overlay {
         display: none; } }
+
+@media screen and (min-width: 1400px) {
+  .main-wrapper .main-grid {
+    grid-template-columns: auto auto auto auto; } }

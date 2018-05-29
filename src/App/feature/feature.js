@@ -18,6 +18,7 @@ const images = importAll(
 
 class Feature extends Component {
   componentDidMount() {
+    // this.scrollToTop();
     let header = document.getElementById('header');
     let headerHeight = header.offsetHeight;
     let feature = document.getElementById('feature-wrapper');
@@ -27,7 +28,12 @@ class Feature extends Component {
     } else window.addEventListener('scroll', this.handleScroll);
   }
 
+  // scrollToTop() {
+  //   window.scrollTo(0, 0);
+  // }
+
   componentDidUpdate() {
+    // setTimeout(this.scrollToTop, 250);    
     let feature = document.getElementById('feature-wrapper');
     let featureWidth = feature.offsetWidth;
     if (featureWidth >= 770) {
@@ -39,7 +45,7 @@ class Feature extends Component {
       imageTwo.style.opacity = '0';
       let imageThree = document.getElementById('feature-image-three');
       window.addEventListener('scroll', this.handleScroll);
-    }
+    };
   }
 
   componentWillUnmount() {
@@ -48,10 +54,7 @@ class Feature extends Component {
 
   handleScroll() {
     let scroll =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0;
+      window.pageYOffset;
     let text = document.getElementById('text-div');
     let textTop = text.offsetTop;
     let windowHeight = window.innerHeight;
@@ -66,7 +69,7 @@ class Feature extends Component {
       imageTwo.style.transition = 'transform 2s';
       imageTwo.style.transform = 'translate(0, 0)';
       imageTwo.style.opacity = '1';
-    }
+    };
   }
 
   render() {
