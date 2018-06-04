@@ -7,6 +7,7 @@ function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
     images[item.replace('./', '')] = r(item);
+    return images;    
   });
   return images;
 }
@@ -17,6 +18,7 @@ const images = importAll(
 
 class Main extends Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     let header = document.getElementById('header');
     let headerHeight = header.offsetHeight;
     let main = document.getElementById('main-wrapper');
@@ -30,7 +32,7 @@ class Main extends Component {
       <div className="main-wrapper" id="main-wrapper">
         <div className="main-grid">
           {API.all().map(p => (
-            <div className="grid-item">
+            <div className="grid-item" key={p.key}>
               <NavLink exact activeClassName="active" to={`/work/${p.key}`}>
                 <img src={images[p.imagePath]} alt={p.title} />
                 <div className="overlay">
