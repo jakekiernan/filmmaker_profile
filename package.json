@@ -1,7 +1,7 @@
 {
   "name": "jasper",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
